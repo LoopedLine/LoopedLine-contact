@@ -105,25 +105,33 @@
 
 <main>
 
-  <div class="m-4">
+  <div class="m-6">
     <h2>What's on your mind?</h2>
-    <form action="POST" data-netlify="true">
+    <form action="POST" data-netlify="true" netlify-honeypot="reply">
         <div class="mb-3">
+            <label class="form-label" for="inputName">Name</label>
             <input type="text" class="form-control" id="inputName" name="name" placeholder="Name" required="required">
         </div>
         <div class="mb-3">
+            <label class="form-label" for="inputEmail">Email</label>
             <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required="required">
         </div>
         <div class="mb-3">
+            <label class="form-label" for="inputSubject">Subject</label>
             <input type="text" class="form-control" id="inputSubject" name="subject" placeholder="Subject" required="required">
         </div>
+        <div class="hidden">
+            <label class="form-label" for="inputReply">Reply</label>
+            <input type="text" class="form-control" id="inputReply" name="reply" placeholder="You should not complete this.">
+        </div>
         <div class="mb-3">
-            <textarea type="textarea" class="form-control" id="inputMessage" name="message" placeholder="Message" rows="3" required="required"></textarea>
+            <label class="form-label" for="inputMessage">Message</label>
+            <textarea type="textarea" class="form-control" id="inputMessage" name="message" placeholder="Message" rows="3" required="required" style="resize:vertical"></textarea>
         </div>
         <div class="field">
             <div data-netlify-recaptcha="true"></div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary btn-contact">Submit</button>
     </form>
 </div>
 
